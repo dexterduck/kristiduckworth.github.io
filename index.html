@@ -1,7 +1,45 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
+title: Gallery
+description: null
+featured_image: null
 ---
+
 {% include authenticator.html %}
+<section class="intro">
+	<div class="wrap">
+		<h1>Kristi Duckworth is a mosaic artist.</h1>
+		<p>Kristi teaches Artrageous after-school at Hutchison School in their Center for Excellence’ Arts Academy. Presently she is involved in tile making and mosaic sculpture at Lester Community Center in Binghampton and also teaches after-school at Madonna Learning Center. Kristi enjoys nature and working with kids as field trip coordinator with Memphis Kids in Nature. See Classes and Workshops for information on classes for all ages offered at Garden Path Studio or call for availability or to book your private party or art lesson.</p>
+        <p>Kristi designs tile backsplashes, hand-made tile, corporate signs, and private commissions of all shapes and sizes. Let her design your next kitchen or bathroom backsplash, fireplace surround, sidewalk, or address plaque.</p>
+	</div>
+</section>
+
+<section class="portfolio">
+	<div class="content-wrap portfolio-wrap">
+
+		{% for project in site.gallery %}
+
+		<div class="portfolio-item">
+
+			<a class="portfolio-item__link" href="{{ project.url | relative_url }}">
+
+				<div class="portfolio-item__image">
+					<img src="{{ project.featured_image | relative_url }}" alt="{{ project.title }}">
+				</div>
+
+				<div class="portfolio-item__content">
+					<div class="portfolio-item__info">
+						<h2 class="portfolio-item__title">{{ project.title }}</h2>
+						<p class="portfolio-item__subtitle">{{ project.subtitle }}</p>
+					</div>
+				</div>
+
+			</a>
+
+		</div>
+
+		{% endfor %}
+
+	</div>
+
+</section>
