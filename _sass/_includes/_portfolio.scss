@@ -49,10 +49,12 @@
 	align-items: center;
 	justify-content: center;
 	background: rgba($overlay-background-color, $overlay-opacity);
-
-	opacity: 0;
-	visibility: hidden;
-	@include transition(all 0.2s ease-in-out);
+	
+	@include mq(laptop) {
+		opacity: 0;
+		visibility: hidden;
+		@include transition(all 0.2s ease-in-out);
+	}
 }
 
 .portfolio-item__info {
