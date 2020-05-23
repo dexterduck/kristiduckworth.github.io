@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: master
+  repo: kristiduckworth/kristiduckworth.github.io
 media_folder: 'assets/uploads'
 collections:
   - name: 'blog'
