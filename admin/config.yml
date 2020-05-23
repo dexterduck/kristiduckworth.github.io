@@ -3,8 +3,14 @@ backend:
   repo: kristiduckworth/kristiduckworth.github.io
 media_folder: 'assets/uploads'
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
+  - name: 'classes'
+    label: 'Classes'
+    folder: '_classes/'
+    create: true
+    editor:
+      preview: false
     fields:
-      - { name: Title }
+      - { name: 'title', label: 'Title', widget: 'string' }
+      - { name: 'subtitle', label: 'Subtitle', widget: 'string', default: null }
+      - { name: 'description', label: 'Description', widget: 'string', default: null }
+      - { name: 'body', label: 'Body', widget: 'markdown' }
