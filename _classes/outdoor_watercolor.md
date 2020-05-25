@@ -1,6 +1,6 @@
 ---
 title: 'Outdoor Watercolor'
-subtitle: 'Art & Nature Class'
+categories: 'nature'
 description: 'Anyone who enjoys getting outside can enjoy sketching nature in watercolor'
 featured_image: /images/classes/nature2.jpg
 ---

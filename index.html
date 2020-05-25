@@ -14,23 +14,23 @@ featured_image: null
 	</div>
 </section>
 
-<section class="portfolio">
-	<div class="content-wrap portfolio-wrap">
+<section class="article">
+	<div class="content-wrap article-wrap">
 
 		{% for project in site.gallery %}
 
-		<div class="portfolio-item">
+		<div class="article-item">
 
-			<a class="portfolio-item__link" href="{{ project.url | relative_url }}">
+			<a class="article-item__link" href="{{ project.url | relative_url }}">
 
-				<div class="portfolio-item__image">
+				<div class="article-item__image">
 					<img src="{{ project.featured_image | relative_url }}" alt="{{ project.title }}">
 				</div>
 
-				<div class="portfolio-item__content">
-					<div class="portfolio-item__info">
-						<h2 class="portfolio-item__title">{{ project.title }}</h2>
-						<p class="portfolio-item__subtitle">{{ project.subtitle }}</p>
+				<div class="article-item__content">
+					<div class="article-item__info">
+						<h2 class="article-item__title">{{ project.title }}</h2>
+						<p class="article-item__subtitle">{{ project.subtitle }}</p>
 					</div>
 				</div>
 

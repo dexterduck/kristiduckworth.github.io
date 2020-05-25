@@ -1,25 +1,25 @@
 // - - - - - - - - - - - - - - - - - -
 
-// Portfolio
+// Article
 
 // - - - - - - - - - - - - - - - - - -
 
-.portfolio {
+.article {
 	padding: 0 $grid-spacing/2;
 }
 
-.portfolio-wrap {
+.article-wrap {
 	
 }
 
-.portfolio-item {
+.article-item {
 	position: relative;
 	padding: $grid-spacing/2;
 	float: left;
 	width: 50%;
 }
 
-.portfolio-item__link {
+.article-item__link {
 	position: relative;
 	display: block;
 
@@ -27,7 +27,7 @@
 
 		&:hover {
 
-			.portfolio-item__content {
+			.article-item__content {
 				opacity: 1;
 				visibility: visible;
 			}
@@ -35,11 +35,11 @@
 	}
 }
 
-.portfolio-item__image {
+.article-item__image {
 	width: 100%;
 }
 
-.portfolio-item__content {
+.article-item__content {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -50,16 +50,18 @@
 	justify-content: center;
 	background: rgba($overlay-background-color, $overlay-opacity);
 	
-	opacity: 0;
-	visibility: hidden;
-	@include transition(all 0.2s ease-in-out);
+	@include mq(laptop) {
+		opacity: 0;
+		visibility: hidden;
+		@include transition(all 0.2s ease-in-out);
+	}
 }
 
-.portfolio-item__info {
+.article-item__info {
 	text-align: center;
 }
 
-.portfolio-item__title {
+.article-item__title {
 	color: $overlay-text-color;
 	font-size: $grid-item-title-small;
 	font-weight: $grid-item-title-weight;
@@ -74,7 +76,7 @@
 	}
 }
 
-.portfolio-item__subtitle {
+.article-item__subtitle {
 	margin-top: 5px;
 	color: rgba($overlay-text-color, 0.7);
 	font-size: $grid-item-subtitle-small;

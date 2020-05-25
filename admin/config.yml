@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: kristiduckworth/kristiduckworth.github.io
-media_folder: 'assets/uploads'
+media_folder: 'images'
 collections:
   - name: 'classes'
     label: 'Classes'
@@ -10,7 +10,24 @@ collections:
     editor:
       preview: false
     fields:
-      - { name: 'title', label: 'Title', widget: 'string' }
-      - { name: 'subtitle', label: 'Subtitle', widget: 'string', default: null }
-      - { name: 'description', label: 'Description', widget: 'string', default: null }
+      - { name: 'title', label: 'Name', widget: 'string' }
+      - name: 'categories'
+        label: 'Category'
+        widget: 'select'
+        options:
+          - { label: 'Mosaic', value: 'mosaic'}
+          - { label: 'Painting', value: 'painting'}
+          - { label: 'Nature', value: 'nature'}
+      - name: 'repeating'
+        label: 'Repeating'
+        required: false
+        widget: 'boolean'
+      - name: 'events'
+        label: 'Schedule'
+        widget: 'list'
+        collapsed: false
+        fields:
+          - { name: 'day', label: 'Day', widget: 'string', hint: 'May 16th, Thursday, Christmas' }
+          - { name: 'time', label: 'Time', widget: 'string', hint: '8pm, 10am, Midnight' }
+      - { name: 'description', label: 'Description', widget: 'string', required: false }
       - { name: 'body', label: 'Body', widget: 'markdown' }

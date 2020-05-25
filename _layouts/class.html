@@ -5,10 +5,25 @@ layout: default
 <section class="intro">
 
 	<div class="wrap">
-
+		{% if page.categories.first %}
+			<p><a href="/classes/{{page.categories.first | slug}}">{{ page.categories.first | capitalize }} Class</a></p>
+		{% endif %}
 		<h1>{{ page.title }}</h1>
-		<p>{{ page.subtitle }}</p>
-
+		{% if page.repeating %}
+			<p><b><i>Every &#8212;</i></b></p>
+		{% endif %}
+		{% if page.events %}
+			{% for event in page.events %}
+				<p><b><i>
+				{% if page.repeating %}
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				{% endif %}
+				{{ event.day }} @ {{ event.time }}
+				</i></b></p>
+			{% endfor %}
+		{% else %}
+			<p><b><i>TBD</i></b></p>
+		{% endif %}
 	</div>
 
 </section>

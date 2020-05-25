@@ -11,7 +11,7 @@ menu_settings:
     - title: 'Gallery'
       url: '/'
     - title: 'Classes'
-      url: '/classes'
+      url: '/classes/'
     - title: 'About'
       url: '/about'
     - title: 'Contact'
