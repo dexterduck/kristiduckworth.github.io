@@ -4,7 +4,7 @@ backend:
 media_folder: 'images'
 collections:
   - name: 'classes'
-    label: 'Classes'
+    label: 'Class'
     folder: '_classes/'
     create: true
     editor:
@@ -23,11 +23,11 @@ collections:
         required: false
         widget: 'boolean'
       - name: 'events'
-        label: 'Schedule'
+        label: 'Events'
         widget: 'list'
-        collapsed: false
+        summary: '{{fields.day}} @ {{fields.time}}'
         fields:
-          - { name: 'day', label: 'Day', widget: 'string', hint: 'May 16th, Thursday, Christmas' }
-          - { name: 'time', label: 'Time', widget: 'string', hint: '8pm, 10am, Midnight' }
+          - { name: 'day', label: 'Day', widget: 'string', hint: 'Example: May 16th, Thursday, Christmas' }
+          - { name: 'time', label: 'Time', widget: 'string', hint: 'Example: 8pm, 10am, Midnight' }
       - { name: 'description', label: 'Description', widget: 'string', required: false }
       - { name: 'body', label: 'Body', widget: 'markdown' }
